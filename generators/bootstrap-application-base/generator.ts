@@ -357,16 +357,16 @@ export default class BootstrapApplicationBase extends BaseApplicationGenerator {
         this.validateResult(loadEntitiesOtherSide(entities, { application }));
 
         for (const entity of entities) {
-          if (!entity.builtIn) {
-            const invalidRelationship = entity.relationships.find(
-              ({ otherEntity }) => !otherEntity.builtIn && entity.microserviceName !== otherEntity.microserviceName,
-            );
-            if (invalidRelationship) {
-              throw new Error(
-                `Microservice entities cannot have relationships with entities from other microservice: '${entity.name}.${invalidRelationship.relationshipName}'`,
-              );
-            }
-          }
+          // if (!entity.builtIn) {
+          //   const invalidRelationship = entity.relationships.find(
+          //     ({ otherEntity }) => !otherEntity.builtIn && entity.microserviceName !== otherEntity.microserviceName,
+          //   );
+          //   if (invalidRelationship) {
+          //     throw new Error(
+          //       `Microservice entities cannot have relationships with entities from other microservice: '${entity.name}.${invalidRelationship.relationshipName}'`,
+          //     );
+          //   }
+          // }
 
           for (const field of entity.fields) {
             if (isFieldBinaryType(field)) {
