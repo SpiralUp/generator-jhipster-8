@@ -120,9 +120,9 @@
     "update-snapshots": "esmocha lib/jdl generators cli .blueprint --update-snapshot --no-insight --forbid-only"
   },
   "overrides": {
-    "ejs-lint": {
-      "ejs": "$ejs"
-    }
+    "esbuild": "0.27.02",
+    "tar": "7.5.2",
+    "glob": "13.0.0"
   },
   "dependencies": {
     "@eslint/js": "9.26.0",
@@ -147,7 +147,7 @@
     "eslint-plugin-import-x": "4.11.0",
     "eslint-plugin-unused-imports": "4.1.4",
     "execa": "9.5.2",
-    "fast-xml-parser": "5.2.2",
+    "fast-xml-parser": "^5.3.7",
     "glob": "13.0.0",
     "globals": "16.0.0",
     "isbinaryfile": "5.0.4",
@@ -219,10 +219,5 @@
     "type": "opencollective",
     "url": "https://opencollective.com/generator-jhipster",
     "logo": "https://opencollective.com/opencollective/logo.txt"
-  },
-  "overrides": {
-    "esbuild": "0.27.02",
-    "tar": "7.5.2",
-    "glob": "13.0.0"
   }
 }
